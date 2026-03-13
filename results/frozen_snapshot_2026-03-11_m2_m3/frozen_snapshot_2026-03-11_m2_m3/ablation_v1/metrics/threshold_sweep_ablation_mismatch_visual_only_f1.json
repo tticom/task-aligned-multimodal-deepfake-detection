@@ -1,0 +1,43 @@
+{
+  "timestamp_utc": "20260311T132947Z",
+  "task": "mismatch",
+  "mode": "visual_only",
+  "selection_rule": "max validation F1",
+  "selected_threshold": 0.45498676531531435,
+  "val_metrics": {
+    "threshold": 0.45498676531531435,
+    "support": 3157,
+    "positives": 1493,
+    "negatives": 1664,
+    "tn": 44,
+    "fp": 1620,
+    "fn": 1,
+    "tp": 1492,
+    "accuracy": 0.4865378523915109,
+    "precision": 0.4794344473007712,
+    "recall": 0.999330207635633,
+    "f1": 0.6479913137893594,
+    "fpr": 0.9735576923076923,
+    "tpr": 0.999330207635633,
+    "auroc": 0.12185350546138393,
+    "auroc_inverted": 0.878146494538616
+  },
+  "test_metrics": {
+    "threshold": 0.45498676531531435,
+    "support": 3171,
+    "positives": 1479,
+    "negatives": 1692,
+    "tn": 49,
+    "fp": 1643,
+    "fn": 3,
+    "tp": 1476,
+    "accuracy": 0.48092084515925576,
+    "precision": 0.47322859890990704,
+    "recall": 0.9979716024340771,
+    "f1": 0.6420182688125272,
+    "fpr": 0.9710401891252955,
+    "tpr": 0.9979716024340771,
+    "auroc": 0.13491241446444072,
+    "auroc_inverted": 0.8650875855355593
+  }
+}

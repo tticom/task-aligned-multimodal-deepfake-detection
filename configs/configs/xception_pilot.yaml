@@ -1,0 +1,60 @@
+# configs/xception_pilot.yaml
+# Paths are all relative to the repo root:
+# /users/40432309/sharedscratch/fakeav_xception
+
+experiment:
+  name: xception_pilot_fakeav
+  seed: 42
+  output_dir: checkpoints/xception_visual_run1   # relative to repo root
+  log_dir: logs                                  # relative to repo root
+
+data:
+  # Cropped faces for training:
+  root_crops: data_crops                        # contains Real/ and Fake/
+  real_subdir: Real
+  fake_subdir: Fake
+
+  # Option 1: folder-based splits  
+  # Use pre-made splits via folder names: train/val/test
+  use_folder_splits: true  
+  train_subdir: train  
+  val_subdir: val  
+  test_subdir: test  
+
+  # Option 2: CSV-based splits  
+  use_csv_splits: false                  # set to true to enable  
+  manifest_csv: configs/fakeav_visual_manifest.csv  
+  splits_csv: configs/fakeav_visual_splits.csv  
+
+  use_subset: true
+  subset_fraction: 0.1      # use 0.05 5%, 0.1 10% of images from each split/class for pilot
+  image_size: 299
+
+model:
+  arch: xception
+  pretrained: true
+  num_classes: 2
+  dropout: 0.5
+
+training:
+  epochs: 5
+  batch_size: 16
+  optimizer: adam
+  learning_rate: 0.0002
+  weight_decay: 0.0
+  num_workers: 4
+  pin_memory: true
+
+  log_interval: 10
+  val_interval_epochs: 1
+  save_best: true
+  early_stopping_patience: 3
+
+evaluation:
+  metrics: ["accuracy"]
+
+hardware:
+  gpus: 1
+  amp: false
+  cudnn_deterministic: true
+  cudnn_benchmark: false

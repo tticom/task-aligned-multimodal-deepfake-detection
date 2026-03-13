@@ -1,0 +1,11 @@
+split,group_type,group_value,support,positives,negatives,auroc,auroc_inverted,accuracy_thr05,precision_thr05,recall_thr05,f1_thr05,fpr_thr05,tn,fp,fn,tp
+test,overall,ALL,3171,3069,102,0.7508641123441883,0.24913588765581177,0.9681488489435509,0.9684343434343434,0.9996741609644836,0.9838063171396505,0.9803921568627451,2,100,1,3068
+test,provenance_class,FakeVideo-FakeAudio,1641,1641,0,,,1.0,1.0,1.0,1.0,,0,0,0,1641
+test,provenance_class,FakeVideo-RealAudio,1428,1428,0,,,0.9992997198879552,1.0,0.9992997198879552,0.9996497373029772,,0,0,1,1427
+test,provenance_class,RealVideo-FakeAudio,51,0,51,,,0.0392156862745098,0.0,0.0,0.0,0.9607843137254902,2,49,0,0
+test,provenance_class,RealVideo-RealAudio,51,0,51,,,0.0,0.0,0.0,0.0,1.0,0,51,0,0
+val,overall,ALL,3157,3067,90,0.751577727058653,0.24842227294134697,0.9711751662971175,0.9714828897338403,0.9996739484838605,0.9853768278965129,1.0,0,90,1,3066
+val,provenance_class,FakeVideo-FakeAudio,1619,1619,0,,,1.0,1.0,1.0,1.0,,0,0,0,1619
+val,provenance_class,FakeVideo-RealAudio,1448,1448,0,,,0.9993093922651933,1.0,0.9993093922651933,0.9996545768566494,,0,0,1,1447
+val,provenance_class,RealVideo-FakeAudio,45,0,45,,,0.0,0.0,0.0,0.0,1.0,0,45,0,0
+val,provenance_class,RealVideo-RealAudio,45,0,45,,,0.0,0.0,0.0,0.0,1.0,0,45,0,0

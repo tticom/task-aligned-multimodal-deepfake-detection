@@ -1,0 +1,113 @@
+{
+  "timestamp_utc": "20260310T184529Z",
+  "infile_features": "/mnt/scratch/users/40432309/fakeav_xception/data_avsync/features_avsync_v1/features_merged.jsonl.gz",
+  "infile_manifest": "/mnt/scratch/users/40432309/fakeav_xception/manifests_v2/avsync_manifest_v2_with_paths.jsonl",
+  "outputs": {
+    "mismatch_features": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/avsync_target_aligned/taskdefs/avsync_features_mismatch.jsonl.gz",
+    "videoauth_features": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/avsync_target_aligned/taskdefs/avsync_features_videoauth.jsonl.gz",
+    "summary_json": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/avsync_target_aligned/taskdefs/derive_avsync_taskdefs_summary.json",
+    "readme": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/avsync_target_aligned/taskdefs/README.md"
+  },
+  "rows_total": 20434,
+  "counts_by_split": {
+    "test": 3171,
+    "train": 14106,
+    "val": 3157
+  },
+  "provenance_counts_by_split": {
+    "test": {
+      "RealVideo-FakeAudio": 51,
+      "FakeVideo-FakeAudio": 1641,
+      "RealVideo-RealAudio": 51,
+      "FakeVideo-RealAudio": 1428
+    },
+    "train": {
+      "FakeVideo-FakeAudio": 7395,
+      "RealVideo-FakeAudio": 148,
+      "RealVideo-RealAudio": 147,
+      "FakeVideo-RealAudio": 6416
+    },
+    "val": {
+      "RealVideo-FakeAudio": 45,
+      "FakeVideo-FakeAudio": 1619,
+      "RealVideo-RealAudio": 45,
+      "FakeVideo-RealAudio": 1448
+    }
+  },
+  "mismatch_label_counts_by_split": {
+    "test": {
+      "1": 1479,
+      "0": 1692
+    },
+    "train": {
+      "0": 7542,
+      "1": 6564
+    },
+    "val": {
+      "1": 1493,
+      "0": 1664
+    }
+  },
+  "videoauth_label_counts_by_split": {
+    "test": {
+      "0": 102,
+      "1": 3069
+    },
+    "train": {
+      "1": 13811,
+      "0": 295
+    },
+    "val": {
+      "0": 90,
+      "1": 3067
+    }
+  },
+  "rules": {
+    "mismatch_proxy": {
+      "1": "exactly one modality manipulated",
+      "0": "both modalities matched",
+      "mapping": {
+        "RealVideo-RealAudio": 0,
+        "FakeVideo-FakeAudio": 0,
+        "RealVideo-FakeAudio": 1,
+        "FakeVideo-RealAudio": 1
+      }
+    },
+    "video_authenticity": {
+      "1": "FakeVideo",
+      "0": "RealVideo",
+      "mapping": {
+        "FakeVideo-FakeAudio": 1,
+        "FakeVideo-RealAudio": 1,
+        "RealVideo-FakeAudio": 0,
+        "RealVideo-RealAudio": 0
+      }
+    }
+  },
+  "manifest_crosscheck": {
+    "manifest_provided": true,
+    "rows_checked": 20434,
+    "mismatch_count": 0,
+    "example_mismatches": []
+  },
+  "sanity_examples": {
+    "expected_interpretation": {
+      "RealVideo-FakeAudio": {
+        "mismatch_label": 1,
+        "videoauth_label": 0
+      },
+      "FakeVideo-RealAudio": {
+        "mismatch_label": 1,
+        "videoauth_label": 1
+      },
+      "RealVideo-RealAudio": {
+        "mismatch_label": 0,
+        "videoauth_label": 0
+      },
+      "FakeVideo-FakeAudio": {
+        "mismatch_label": 0,
+        "videoauth_label": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "20260311T132947Z",
+  "task": "mismatch",
+  "mode": "visual_only",
+  "selection_rule": "max_recall subject to validation FPR <= 0.01 and recall > 0",
+  "fpr_target": 0.01,
+  "selected_threshold": null,
+  "infeasible": true,
+  "reason": "No validation threshold achieved target FPR with non-zero recall.",
+  "validation_negatives": 1664,
+  "validation_fpr_resolution": 0.0006009615384615385,
+  "val_metrics": null,
+  "test_metrics": null
+}

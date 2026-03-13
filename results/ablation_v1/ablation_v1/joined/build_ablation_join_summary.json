@@ -1,0 +1,66 @@
+{
+  "timestamp_utc": "20260311T130501Z",
+  "inputs": {
+    "visual_preds": "/mnt/scratch/users/40432309/fakeav_xception/data_visual/preds_xception_v2_crops_gpu_run_2/visual_xception_preds_v2.jsonl.gz",
+    "sync_preds_mismatch": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/avsync_target_aligned/preds/avsync_preds_mismatch.jsonl.gz",
+    "sync_preds_videoauth": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/avsync_target_aligned/preds/avsync_preds_videoauth.jsonl.gz",
+    "manifest": "/mnt/scratch/users/40432309/fakeav_xception/manifests_v2/avsync_manifest_v2_with_paths.jsonl"
+  },
+  "resolved_fields": {
+    "visual_score_field": "score",
+    "sync_mismatch_score_field": "score_prob",
+    "sync_videoauth_score_field": "score_prob"
+  },
+  "outputs": {
+    "joined_mismatch": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/ablation_v1/joined/joined_mismatch.jsonl.gz",
+    "joined_videoauth": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/ablation_v1/joined/joined_videoauth.jsonl.gz",
+    "summary_json": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/ablation_v1/joined/build_ablation_join_summary.json",
+    "readme": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/ablation_v1/joined/README.md"
+  },
+  "tasks": {
+    "mismatch": {
+      "rows_joined": 20434,
+      "rows_visual_total": 20434,
+      "rows_sync_total": 20434,
+      "rows_dropped_visual_only": 0,
+      "rows_dropped_sync_only": 0,
+      "split_counts": {
+        "test": 3171,
+        "train": 14106,
+        "val": 3157
+      },
+      "label_counts": {
+        "1": 9536,
+        "0": 10898
+      },
+      "provenance_counts": {
+        "RealVideo-FakeAudio": 244,
+        "FakeVideo-FakeAudio": 10655,
+        "RealVideo-RealAudio": 243,
+        "FakeVideo-RealAudio": 9292
+      }
+    },
+    "videoauth": {
+      "rows_joined": 20434,
+      "rows_visual_total": 20434,
+      "rows_sync_total": 20434,
+      "rows_dropped_visual_only": 0,
+      "rows_dropped_sync_only": 0,
+      "split_counts": {
+        "test": 3171,
+        "train": 14106,
+        "val": 3157
+      },
+      "label_counts": {
+        "0": 487,
+        "1": 19947
+      },
+      "provenance_counts": {
+        "RealVideo-FakeAudio": 244,
+        "FakeVideo-FakeAudio": 10655,
+        "RealVideo-RealAudio": 243,
+        "FakeVideo-RealAudio": 9292
+      }
+    }
+  }
+}

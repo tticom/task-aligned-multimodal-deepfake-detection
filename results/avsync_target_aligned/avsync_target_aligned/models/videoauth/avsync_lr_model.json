@@ -1,0 +1,119 @@
+{
+  "timestamp_utc": "20260311T130353Z",
+  "task": "videoauth",
+  "infile": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/avsync_target_aligned/taskdefs/avsync_features_videoauth.jsonl.gz",
+  "seed": 42,
+  "hyperparameters": {
+    "penalty": "l2",
+    "C": 1.0,
+    "solver": "liblinear",
+    "max_iter": 1000,
+    "class_weight": null
+  },
+  "split_counts": {
+    "test": 3171,
+    "train": 14106,
+    "val": 3157
+  },
+  "label_counts_by_split": {
+    "train": {
+      "1": 13811,
+      "0": 295
+    },
+    "val": {
+      "0": 90,
+      "1": 3067
+    },
+    "test": {
+      "0": 102,
+      "1": 3069
+    }
+  },
+  "feature_count": 15,
+  "feature_names": [
+    "dt_sec",
+    "features.audio_mean",
+    "features.audio_mean_nonspeech",
+    "features.audio_mean_speech",
+    "features.best_corr",
+    "features.best_lag_ms",
+    "features.corr_all",
+    "features.corr_nonspeech",
+    "features.corr_speech",
+    "features.mouth_mean",
+    "features.mouth_mean_nonspeech",
+    "features.mouth_mean_speech",
+    "has_speech",
+    "n_samples",
+    "speech_fraction"
+  ],
+  "train_imputation_median": {
+    "dt_sec": 0.07999998331069946,
+    "features.audio_mean": 0.026831815019249916,
+    "features.audio_mean_nonspeech": 0.020989366807043552,
+    "features.audio_mean_speech": 0.02822123095393181,
+    "features.best_corr": 0.206059992313385,
+    "features.best_lag_ms": 0.0,
+    "features.corr_all": 0.05617954089553152,
+    "features.corr_nonspeech": 0.12075845440531964,
+    "features.corr_speech": 0.029701575516818048,
+    "features.mouth_mean": 8.151469707489014,
+    "features.mouth_mean_nonspeech": 7.71891975402832,
+    "features.mouth_mean_speech": 8.274083137512207,
+    "has_speech": 1.0,
+    "n_samples": 59.0,
+    "speech_fraction": 0.7321428656578064
+  },
+  "train_standardisation_mean": {
+    "dt_sec": 0.0801426299686434,
+    "features.audio_mean": 0.03585938925718326,
+    "features.audio_mean_nonspeech": 0.029497897392805672,
+    "features.audio_mean_speech": 0.038573437711220925,
+    "features.best_corr": 0.21039935304574667,
+    "features.best_lag_ms": 11.99076728340448,
+    "features.corr_all": 0.058467059995504105,
+    "features.corr_nonspeech": 0.12410629158288226,
+    "features.corr_speech": 0.032011399681155614,
+    "features.mouth_mean": 8.21464151118226,
+    "features.mouth_mean_nonspeech": 7.841751689803054,
+    "features.mouth_mean_speech": 8.338831740336547,
+    "has_speech": 0.999929108180916,
+    "n_samples": 65.23840918757975,
+    "speech_fraction": 0.7216746131364637
+  },
+  "train_standardisation_std": {
+    "dt_sec": 0.0016069916575594649,
+    "features.audio_mean": 0.030664826739906833,
+    "features.audio_mean_nonspeech": 0.02845490084759074,
+    "features.audio_mean_speech": 0.033022582764475006,
+    "features.best_corr": 0.11210362722309702,
+    "features.best_lag_ms": 285.02918686100054,
+    "features.corr_all": 0.1497437864355864,
+    "features.corr_nonspeech": 0.2719539207303732,
+    "features.corr_speech": 0.1728086509407142,
+    "features.mouth_mean": 3.3389819500857714,
+    "features.mouth_mean_nonspeech": 3.4308567936364294,
+    "features.mouth_mean_speech": 3.4233361624839342,
+    "has_speech": 0.00841942951951387,
+    "n_samples": 23.688313563499026,
+    "speech_fraction": 0.08556521691150228
+  },
+  "intercept": 4.292035894244946,
+  "coefficients": {
+    "dt_sec": -0.02126589245238877,
+    "features.audio_mean": -0.15742447259363096,
+    "features.audio_mean_nonspeech": 0.516716292586448,
+    "features.audio_mean_speech": -0.31493292057658323,
+    "features.best_corr": 0.269988570404975,
+    "features.best_lag_ms": -0.1462225975664031,
+    "features.corr_all": -0.31719354401977107,
+    "features.corr_nonspeech": 0.29812167262702977,
+    "features.corr_speech": 0.27717367334841553,
+    "features.mouth_mean": -0.21388584220624696,
+    "features.mouth_mean_nonspeech": 0.07431702879051963,
+    "features.mouth_mean_speech": -0.1243791981918359,
+    "has_speech": 0.06940887612678244,
+    "n_samples": -0.3427441477449639,
+    "speech_fraction": 0.5615965477282552
+  }
+}

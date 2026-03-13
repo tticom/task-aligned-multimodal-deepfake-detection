@@ -1,0 +1,42 @@
+{
+  "timestamp_utc": "20260311T130353Z",
+  "task": "videoauth",
+  "selection_rule": "max validation F1",
+  "selected_threshold": 0.7532540257160929,
+  "val_metrics": {
+    "threshold": 0.7532540257160929,
+    "support": 3157,
+    "positives": 3067,
+    "negatives": 90,
+    "tn": 3,
+    "fp": 87,
+    "fn": 2,
+    "tp": 3065,
+    "accuracy": 0.9718086791257523,
+    "precision": 0.9723984771573604,
+    "recall": 0.9993478969677209,
+    "f1": 0.9856890175269336,
+    "fpr": 0.9666666666666667,
+    "tpr": 0.9993478969677209,
+    "auroc": 0.751577727058653,
+    "auroc_inverted": 0.24842227294134697
+  },
+  "test_metrics": {
+    "threshold": 0.7532540257160929,
+    "support": 3171,
+    "positives": 3069,
+    "negatives": 102,
+    "tn": 2,
+    "fp": 100,
+    "fn": 2,
+    "tp": 3067,
+    "accuracy": 0.967833491012299,
+    "precision": 0.9684243763814335,
+    "recall": 0.999348321928967,
+    "f1": 0.9836433611289288,
+    "fpr": 0.9803921568627451,
+    "tpr": 0.999348321928967,
+    "auroc": 0.7508641123441883,
+    "auroc_inverted": 0.24913588765581177
+  }
+}

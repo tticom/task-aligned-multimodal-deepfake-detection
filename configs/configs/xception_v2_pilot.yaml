@@ -1,0 +1,57 @@
+# configs/xception_v2_full.yaml
+# Repo root: /users/40432309/sharedscratch/fakeav_xception
+
+experiment:
+  name: xception_full_fakeav_v2
+  seed: 42
+  output_dir: checkpoints/xception_visual_v2_pilot
+  log_dir: logs
+
+data:
+  root_crops: data_crops_v2
+  real_subdir: Real
+  fake_subdir: Fake
+
+  # Use folder splits produced by v2 pipeline:
+  use_folder_splits: true
+  train_subdir: train
+  val_subdir: val
+  test_subdir: test
+
+  # Keep CSV splits recorded for provenance, but training uses folders:
+  use_csv_splits: false
+  manifest_csv: manifests_v2/visual_manifest.csv
+  splits_csv: manifests_v2/visual_splits.csv
+
+  use_subset: true
+  subset_fraction: 0.1
+  image_size: 299
+
+model:
+  arch: xception
+  pretrained: true
+  num_classes: 2
+  dropout: 0.5
+
+training:
+  epochs: 13
+  batch_size: 16
+  optimizer: adam
+  learning_rate: 0.0002
+  weight_decay: 0.0
+  num_workers: 8
+  pin_memory: true
+
+  log_interval: 10
+  val_interval_epochs: 1
+  save_best: true
+  early_stopping_patience: 3
+
+evaluation:
+  metrics: ["accuracy"]
+
+hardware:
+  gpus: 1
+  amp: false
+  cudnn_deterministic: true
+  cudnn_benchmark: false

@@ -1,0 +1,46 @@
+{
+  "timestamp_utc": "20260311T132947Z",
+  "task": "mismatch",
+  "mode": "visual_only",
+  "infile": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/ablation_v1/joined/joined_mismatch.jsonl.gz",
+  "seed": 42,
+  "hyperparameters": {
+    "penalty": "l2",
+    "C": 1.0,
+    "solver": "liblinear",
+    "max_iter": 1000,
+    "class_weight": null
+  },
+  "split_counts": {
+    "test": 3171,
+    "train": 14106,
+    "val": 3157
+  },
+  "label_counts_by_split": {
+    "train": {
+      "0": 7542,
+      "1": 6564
+    },
+    "val": {
+      "1": 1493,
+      "0": 1664
+    },
+    "test": {
+      "1": 1479,
+      "0": 1692
+    }
+  },
+  "feature_names": [
+    "visual_score"
+  ],
+  "train_standardisation_mean": {
+    "visual_score": 0.9813178893748052
+  },
+  "train_standardisation_std": {
+    "visual_score": 0.11226485218685299
+  },
+  "intercept": -0.13884880844952152,
+  "coefficients": {
+    "visual_score": 0.005420314340258488
+  }
+}

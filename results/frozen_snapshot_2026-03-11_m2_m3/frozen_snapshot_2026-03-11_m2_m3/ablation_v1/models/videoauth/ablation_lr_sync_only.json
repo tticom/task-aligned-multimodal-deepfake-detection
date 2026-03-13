@@ -1,0 +1,46 @@
+{
+  "timestamp_utc": "20260311T133350Z",
+  "task": "videoauth",
+  "mode": "sync_only",
+  "infile": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/ablation_v1/joined/joined_videoauth.jsonl.gz",
+  "seed": 42,
+  "hyperparameters": {
+    "penalty": "l2",
+    "C": 1.0,
+    "solver": "liblinear",
+    "max_iter": 1000,
+    "class_weight": null
+  },
+  "split_counts": {
+    "test": 3171,
+    "train": 14106,
+    "val": 3157
+  },
+  "label_counts_by_split": {
+    "train": {
+      "1": 13811,
+      "0": 295
+    },
+    "val": {
+      "0": 90,
+      "1": 3067
+    },
+    "test": {
+      "0": 102,
+      "1": 3069
+    }
+  },
+  "feature_names": [
+    "sync_score"
+  ],
+  "train_standardisation_mean": {
+    "sync_score": 0.9787826401832355
+  },
+  "train_standardisation_std": {
+    "sync_score": 0.03257829125060545
+  },
+  "intercept": 3.9696249679679063,
+  "coefficients": {
+    "sync_score": 0.4088136314997462
+  }
+}

@@ -1,0 +1,4 @@
+TYPE	SOURCE	DESTINATION
+DIR	results_preds_v2/avsync_target_aligned	results_registry/frozen_snapshot_2026-03-11_m2_m3/avsync_target_aligned
+DIR	results_preds_v2/ablation_v1	results_registry/frozen_snapshot_2026-03-11_m2_m3/ablation_v1
+FILE	manifests_v2/avsync_manifest_v2_with_paths.jsonl	results_registry/frozen_snapshot_2026-03-11_m2_m3/manifests/avsync_manifest_v2_with_paths.jsonl

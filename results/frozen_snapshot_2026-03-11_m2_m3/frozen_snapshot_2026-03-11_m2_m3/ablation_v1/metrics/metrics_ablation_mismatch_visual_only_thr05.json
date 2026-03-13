@@ -1,0 +1,59 @@
+{
+  "timestamp_utc": "20260311T132947Z",
+  "task": "mismatch",
+  "mode": "visual_only",
+  "positive_class": 1,
+  "positive_semantics": "mismatch_proxy",
+  "infile": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/ablation_v1/joined/joined_mismatch.jsonl.gz",
+  "model_json": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/ablation_v1/models/mismatch/ablation_lr_visual_only.json",
+  "predictions_jsonl_gz": "/mnt/scratch/users/40432309/fakeav_xception/results_preds_v2/ablation_v1/preds/ablation_preds_mismatch_visual_only.jsonl.gz",
+  "split_counts": {
+    "test": 3171,
+    "train": 14106,
+    "val": 3157
+  },
+  "threshold": 0.5,
+  "score_direction": {
+    "higher_score_means_more_likely_positive": true,
+    "validation_auroc": 0.12185350546138393,
+    "validation_auroc_inverted": 0.878146494538616,
+    "test_auroc": 0.13491241446444072,
+    "test_auroc_inverted": 0.8650875855355593
+  },
+  "val_metrics": {
+    "threshold": 0.5,
+    "support": 3157,
+    "positives": 1493,
+    "negatives": 1664,
+    "tn": 1664,
+    "fp": 0,
+    "fn": 1493,
+    "tp": 0,
+    "accuracy": 0.5270826734241368,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "fpr": 0.0,
+    "tpr": 0.0,
+    "auroc": 0.12185350546138393,
+    "auroc_inverted": 0.878146494538616
+  },
+  "test_metrics": {
+    "threshold": 0.5,
+    "support": 3171,
+    "positives": 1479,
+    "negatives": 1692,
+    "tn": 1692,
+    "fp": 0,
+    "fn": 1479,
+    "tp": 0,
+    "accuracy": 0.533585619678335,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "fpr": 0.0,
+    "tpr": 0.0,
+    "auroc": 0.13491241446444072,
+    "auroc_inverted": 0.8650875855355593
+  }
+}
